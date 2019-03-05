@@ -24,4 +24,14 @@ main(List<String> args) {
     ..add(20)
     ..add(40);
   ls.forEach((item) => print(item));
+
+  /// 元素不可重复列表
+  Set<String> set1 = {'1','2','3','3','2'};
+  print(set1); // 会去除重复元素
+
+  set1.forEach((item) => print(item));
+  print('-' * 80);
+  set1..add('123')
+      ..add('456');
+  set1.forEach((item){print(item);});
 }
